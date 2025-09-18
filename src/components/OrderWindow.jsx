@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./OrderWindow.css";
 import axios from "axios";
+  const API_BASE = import.meta.env.VITE_API_URL;
 
 const OrderWindow = ({ uid, mode, onClose }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
@@ -27,7 +28,8 @@ const OrderWindow = ({ uid, mode, onClose }) => {
       setIsSubmitting(true);
       setError("");
       
-      const response = await axios.post("http://localhost:3002/newOrders", orderData);
+      // const response = await axios.post("http://localhost:3002/newOrders", orderData);
+    const response = await axios.post(`${API_BASE}/newOrders`, orderData);
 
       console.log("Order submitted successfully:", response.data);
 
