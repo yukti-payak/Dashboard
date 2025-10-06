@@ -1,0 +1,256 @@
+
+
+
+
+.watchlist-container {
+  padding: 20px;
+  height: 100%;
+}
+
+/* Search Section */
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search:focus {
+  border-color: #1976d2;
+}
+
+.counts {
+  font-size: 0.85rem;
+  color: #777;
+  white-space: nowrap;
+}
+
+/* Watchlist Items */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.list li {
+  position: relative;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.list li:hover {
+  background: #f0f7ff;
+  border-color: #d0d0d0;
+}
+
+.list li.active {
+  background: #f0f7ff;
+  border-color: #d0d0d0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  user-select: none;
+}
+
+.item p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.itemInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.up {
+  color: #2e7d32;
+}
+
+.down {
+  color: #d32f2f;
+}
+
+.percent {
+  font-weight: 500;
+}
+
+.price {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Hover Actions */
+.actions {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buy {
+  background: #1976d2;
+  color: white;
+}
+
+.buy:hover {
+  background: #1565c0;
+}
+
+.sell {
+  background: #d32f2f;
+  color: white;
+}
+
+.sell:hover {
+  background: #c62828;
+}
+
+.action {
+  background: #e0e0e0;
+  color: #333;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action:hover {
+  background: #d0d0d0;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+/* Doughnut Chart */
+.doughnut-chart-container {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+/* ===== RESPONSIVE - MOBILE (768px and below) ===== */
+@media (max-width: 768px) {
+  .watchlist-container {
+    padding: 16px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .counts {
+    text-align: right;
+  }
+
+  .list li {
+    padding: 12px;
+    padding-bottom: 60px; /* Space for actions */
+  }
+
+  .list li.active .item {
+    margin-bottom: 10px;
+  }
+
+  .actions {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    right: 12px;
+    top: auto;
+    transform: none;
+    width: calc(100% - 24px);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .actions button {
+    flex: 1;
+    min-width: 70px;
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+  .watchlist-container {
+    padding: 12px;
+  }
+
+  .list li {
+    padding: 10px;
+    padding-bottom: 55px;
+  }
+
+  .actions {
+    gap: 4px;
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .actions button {
+    padding: 8px 10px;
+    font-size: 0.7rem;
+    min-width: 65px;
+  }
+
+  .item p {
+    font-size: 0.9rem;
+  }
+
+  .itemInfo {
+    font-size: 0.8rem;
+  }
+
+  .doughnut-chart-container {
+    padding: 12px;
+  }
+}

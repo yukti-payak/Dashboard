@@ -1,0 +1,426 @@
+ /* ===== HOLDINGS COMPONENT STYLES ===== */
+
+/* ===== HOLDINGS COMPONENT STYLES ===== */
+
+.holdings-container {
+  padding: 1.5rem;
+  max-width: 100%;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Desktop Table View */
+.desktop-view {
+  display: block;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin-bottom: 1.5rem;
+}
+
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.holdings-table thead {
+  background-color: #f8f9fa;
+}
+
+.holdings-table th {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  z-index: 10;
+}
+
+.holdings-table td {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.holdings-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.holdings-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.stock-name {
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.profit {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.loss {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Enhanced color coding for table cells */
+.holdings-table td.profit {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  font-weight: 600;
+}
+
+.holdings-table td.loss {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Mobile Card View */
+.holdings-cards {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.holding-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.holding-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header .stock-name {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.pl-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pl-badge.profit {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.pl-badge.loss {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-item .label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-item .value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-item .label {
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.footer-item .value {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Summary Section */
+.summary-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.summary-col {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.summary-col h5 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.summary-col p {
+  margin: 0;
+  color: #666;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Chart Section */
+.chart-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.chart-section > div {
+  width: 100%;
+  height: 450px;
+}
+
+/* ===== TABLET (1024px and below) ===== */
+@media (max-width: 1024px) {
+  .holdings-container {
+    padding: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .holdings-table {
+    font-size: 0.875rem;
+  }
+
+  .holdings-table th,
+  .holdings-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .summary-col h5 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== MOBILE (768px and below) ===== */
+@media (max-width: 768px) {
+  .holdings-container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Hide desktop table, show mobile cards */
+  .desktop-view {
+    display: none !important;
+  }
+
+  .mobile-view {
+    display: block !important;
+  }
+  
+  .holdings-cards {
+    display: grid !important;
+    gap: 1rem;
+  }
+
+  .summary-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .summary-col {
+    padding: 0.75rem;
+  }
+
+  .summary-col h5 {
+    font-size: 1.25rem;
+  }
+
+  .summary-col p {
+    font-size: 0.8rem;
+  }
+
+  .chart-section {
+    padding: 1rem;
+    min-height: 350px;
+  }
+  
+  .chart-section > div {
+    height: 350px;
+    overflow-x: auto;
+  }
+}
+
+/* ===== SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+  .holdings-container {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .holding-card {
+    padding: 0.75rem;
+  }
+
+  .card-header .stock-name {
+    font-size: 1rem;
+  }
+
+  .pl-badge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .card-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .card-item .value {
+    font-size: 0.95rem;
+  }
+
+  .summary-section {
+    padding: 1rem;
+  }
+
+  .summary-col {
+    padding: 0.5rem;
+  }
+
+  .summary-col h5 {
+    font-size: 1.1rem;
+  }
+
+  .chart-section {
+    padding: 0.75rem;
+    min-height: 300px;
+  }
+  
+  .chart-section > div {
+    height: 300px;
+  }
+}
+
+/* ===== LANDSCAPE MODE ===== */
+@media (max-height: 500px) and (max-width: 768px) {
+  .holdings-container {
+    padding: 0.75rem;
+  }
+
+  .holding-card {
+    padding: 0.5rem;
+  }
+
+  .summary-section {
+    padding: 0.75rem;
+  }
+}
+
+/* Add this to ensure chart section is always visible on all screen sizes */
+.chart-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  display: block !important; /* Force display on all screens */
+}
+
+/* Ensure summary section is also always visible */
+.summary-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  display: block !important; /* Force display on all screens */
+}

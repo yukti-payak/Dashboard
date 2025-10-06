@@ -8,77 +8,189 @@
 .no-orders {
   text-align: center;
   margin-top: 3rem;
+  padding: 2rem 1rem;
 }
 
 .no-orders p {
   font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
 }
 
 .btn {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
-.btn:hover {
+.btn:hover:not(:disabled) {
   background-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .orders-list {
   margin: 2rem auto;
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 1rem;
-  max-width: 600px;
+  padding: 1.5rem;
+  max-width: 900px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .orders-list h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #333;
+  font-weight: 600;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+  font-size: 0.95rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 th, td {
-  padding: 0.5rem;
-  text-align: center;
-  border: 1px solid #e0e0e0;
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 th {
   background-color: #007bff;
   color: white;
   font-weight: 600;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+td {
+  text-align: center;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+.mode-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mode-badge.buy {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.mode-badge.sell {
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 .error {
-  color: red;
+  color: #dc3545;
   font-size: 0.9rem;
   margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f8d7da;
+  border-radius: 6px;
+  border: 1px solid #f5c6cb;
 }
 
-/* Responsive compact table */
-@media (max-width: 600px) {
+/* Tablet styles */
+@media (max-width: 768px) {
+  .orders {
+    padding: 0.75rem;
+  }
+
   .orders-list {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .orders-list h2 {
+    font-size: 1.25rem;
+  }
+
+  th, td {
     padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile styles - Card layout */
+@media (max-width: 600px) {
+  .orders {
+    padding: 0.5rem;
+  }
+
+  .no-orders {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .no-orders p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .orders-list {
+    padding: 1rem 0.5rem;
+    margin: 1rem auto;
+    border-radius: 6px;
+  }
+
+  .orders-list h2 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .table-container {
+    overflow-x: visible;
   }
 
   table, thead, tbody, th, td, tr {
@@ -90,27 +202,62 @@ tr:nth-child(even) {
   }
 
   tr {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  tr:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   td {
     text-align: right;
-    padding-left: 50%;
+    padding: 0.6rem 0;
     position: relative;
-    font-size: 0.8rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.85rem;
+  }
+
+  td:last-child {
+    border-bottom: none;
   }
 
   td::before {
     content: attr(data-label);
     position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
+    left: 0;
+    font-weight: 600;
     text-align: left;
+    color: #666;
+    font-size: 0.8rem;
+  }
+
+  .mode-badge {
+    float: right;
+    margin-top: -0.25rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .orders-list h2 {
+    font-size: 1rem;
+  }
+
+  td {
+    font-size: 0.8rem;
+  }
+
+  td::before {
+    font-size: 0.75rem;
+  }
+
+  .mode-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
   }
 }
