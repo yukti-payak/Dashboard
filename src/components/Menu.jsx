@@ -7,16 +7,13 @@ import "./Menu.css";
 
 const Menu = () => {
   const location = useLocation();
-  // const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // const handleProfileClick = () => {
-  //   setIsProfileDropdownOpen(!isProfileDropdownOpen);
-  // };
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,8 +28,7 @@ const Menu = () => {
     { path: "/orders", label: "Orders" },
     { path: "/holdings", label: "Holdings" },
     { path: "/positions", label: "Positions" },
-    // { path: "/funds", label: "Funds" },
-    // { path: "/apps", label: "Apps" },
+   
   ];
 
   return (

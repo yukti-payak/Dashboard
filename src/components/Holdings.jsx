@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
@@ -28,21 +25,21 @@ const Holdings = () => {
 
   const labels = allHoldings.map((stock) => stock.name);
 
-  // Create color array based on profit/loss
+  
   const backgroundColors = allHoldings.map((stock) => {
     const curValue = stock.price * stock.qty;
     const pl = curValue - stock.avg * stock.qty;
     return pl >= 0
-      ? "rgba(40, 167, 69, 0.7)" // Green for profit
-      : "rgba(220, 53, 69, 0.7)"; // Red for loss
+      ? "rgba(40, 167, 69, 0.7)" 
+      : "rgba(220, 53, 69, 0.7)"; 
   });
 
   const borderColors = allHoldings.map((stock) => {
     const curValue = stock.price * stock.qty;
     const pl = curValue - stock.avg * stock.qty;
     return pl >= 0
-      ? "rgba(40, 167, 69, 1)" // Solid green
-      : "rgba(220, 53, 69, 1)"; // Solid red
+      ? "rgba(40, 167, 69, 1)" 
+      : "rgba(220, 53, 69, 1)";
   });
 
   const data = {
@@ -80,7 +77,7 @@ const Holdings = () => {
     <div className="holdings-container">
       <h3 className="title">Holdings ({allHoldings.length})</h3>
 
-      {/* Desktop Table View */}
+    
       <div className="table-container desktop-view">
         <table className="holdings-table">
           <thead>
@@ -128,7 +125,7 @@ const Holdings = () => {
         </table>
       </div>
 
-      {/* Mobile Card View */}
+     
       <div className="mobile-view">
         <div className="holdings-cards">
           {allHoldings.map((stock, index) => {
@@ -184,8 +181,6 @@ const Holdings = () => {
           })}
         </div>
       </div>
-
-      {/* Summary Section - Now visible on all screens */}
       <div className="summary-section">
         <div className="summary-row">
           <div className="summary-col">
@@ -215,7 +210,7 @@ const Holdings = () => {
         </div>
       </div>
 
-      {/* Chart Section - Now visible on all screens */}
+   
       <div className="chart-section">
         <VerticalGraph data={data} />
       </div>

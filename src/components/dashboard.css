@@ -1,5 +1,4 @@
-/* ===== DASHBOARD LAYOUT ONLY ===== */
-/* This file only handles the page layout, NOT watchlist component styles */
+
 
 * {
   margin: 0;
@@ -7,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* Dashboard Wrapper */
+
 .dashboard-wrapper {
   display: flex;
   min-height: 100vh;
@@ -15,7 +14,7 @@
   position: relative;
 }
 
-/* Sidebar */
+
 .dashboard-sidebar {
   width: 340px;
   background: #ffffff;
@@ -25,7 +24,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Main Content Area */
+
 .dashboard-main {
   flex: 1;
   padding: 24px;
@@ -33,7 +32,7 @@
   min-width: 0;
 }
 
-/* Hamburger Menu Toggle - Hidden on Desktop */
+
 .menu-toggle {
   display: none;
   position: fixed;
@@ -81,12 +80,10 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Overlay - Hidden on Desktop */
 .sidebar-overlay {
   display: none;
 }
 
-/* Scrollbar Styling */
 .dashboard-sidebar::-webkit-scrollbar,
 .dashboard-main::-webkit-scrollbar {
   width: 8px;
@@ -108,7 +105,7 @@
   background: #b0b0b0;
 }
 
-/* ===== TABLET (1024px and below) ===== */
+
 @media (max-width: 1024px) {
   .dashboard-sidebar {
     width: 300px;
@@ -119,7 +116,7 @@
   }
 }
 
-/* ===== MOBILE (768px and below) ===== */
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -168,7 +165,6 @@
   }
 }
 
-/* ===== SMALL MOBILE (480px and below) ===== */
 @media (max-width: 480px) {
   .dashboard-sidebar {
     width: 85%;
@@ -187,7 +183,7 @@
   }
 }
 
-/* ===== LANDSCAPE MODE ===== */
+
 @media (max-height: 500px) and (max-width: 768px) {
   .dashboard-main {
     padding: 70px 12px 12px;

@@ -1,13 +1,8 @@
-
-
-
-
 .watchlist-container {
   padding: 20px;
   height: 100%;
 }
 
-/* Search Section */
 .search-container {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +33,6 @@
   white-space: nowrap;
 }
 
-/* Watchlist Items */
 .list {
   list-style: none;
   padding: 0;
@@ -103,7 +97,6 @@
   color: #333;
 }
 
-/* Hover Actions */
 .actions {
   position: absolute;
   right: 14px;
@@ -159,7 +152,7 @@
   font-size: 1rem;
 }
 
-/* Doughnut Chart */
+
 .doughnut-chart-container {
   margin-top: 20px;
   padding: 16px;
@@ -168,7 +161,7 @@
   border: 1px solid #e0e0e0;
 }
 
-/* ===== RESPONSIVE - MOBILE (768px and below) ===== */
+
 @media (max-width: 768px) {
   .watchlist-container {
     padding: 16px;
@@ -191,7 +184,7 @@
 
   .list li {
     padding: 12px;
-    padding-bottom: 60px; /* Space for actions */
+    padding-bottom: 60px; 
   }
 
   .list li.active .item {
@@ -218,7 +211,7 @@
   }
 }
 
-/* ===== SMALL MOBILE (480px and below) ===== */
+
 @media (max-width: 480px) {
   .watchlist-container {
     padding: 12px;

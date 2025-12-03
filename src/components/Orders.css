@@ -135,7 +135,6 @@ tr:hover {
   border: 1px solid #f5c6cb;
 }
 
-/* Tablet styles */
 @media (max-width: 768px) {
   .orders {
     padding: 0.75rem;
@@ -156,7 +155,7 @@ tr:hover {
   }
 }
 
-/* Mobile styles - Card layout */
+
 @media (max-width: 600px) {
   .orders {
     padding: 0.5rem;
@@ -242,7 +241,6 @@ tr:hover {
   }
 }
 
-/* Extra small devices */
 @media (max-width: 400px) {
   .orders-list h2 {
     font-size: 1rem;

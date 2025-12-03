@@ -31,7 +31,7 @@ const Orders = () => {
     }
   };
 
-  // ✅ Listen for order refresh trigger
+  
   useEffect(() => {
     if (showOrders && generalContext.orderRefreshTrigger > 0) {
       fetchOrders();

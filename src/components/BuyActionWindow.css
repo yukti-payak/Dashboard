@@ -163,7 +163,6 @@
   background: #d0d0d0;
 }
 
-/* ===== RESPONSIVE - MOBILE (768px and below) ===== */
 @media (max-width: 768px) {
   .buy-action-overlay {
     padding: 10px;
@@ -228,7 +227,6 @@
   }
 }
 
-/* ===== SMALL MOBILE (480px and below) ===== */
 @media (max-width: 480px) {
   .buy-action-overlay {
     padding: 8px;

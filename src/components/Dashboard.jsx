@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import App from './App.jsx'; // Or the correct path to your App component
+import App from './App.jsx'; 
 
 
 import Holdings from "./Holdings";
@@ -24,7 +24,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-wrapper">
-      {/* Mobile Menu Toggle */}
+     
       <button 
         className={`menu-toggle ${isSidebarOpen ? 'open' : ''}`}
         onClick={toggleSidebar}
@@ -57,7 +57,6 @@ const Dashboard = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/holdings" element={<Holdings />} />
           <Route path="/positions" element={<Positions />} />
-          {/* <Route path="/funds" element={<Funds />} /> */}
           <Route path="/apps" element={<App />} />
         </Routes>
       </main>

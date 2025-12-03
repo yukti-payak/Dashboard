@@ -29,13 +29,12 @@ const BuyActionWindow = ({ uid }) => {
       const response = await axios.post(`${API_BASE}/newOrders`, orderData);
       console.log("Order placed successfully:", response.data);
       
-      // ✅ Trigger order refresh
+      
       generalContext.refreshOrders();
       
-      // Close the window after successful order
       generalContext.closeBuyWindow();
       
-      // Optional: Show success message or refresh orders
+     
       alert("Buy order placed successfully!");
     } catch (err) {
       console.error("Failed to place buy order:", err);
@@ -60,13 +59,11 @@ const BuyActionWindow = ({ uid }) => {
       const response = await axios.post(`${API_BASE}/newOrders`, orderData);
       console.log("Order placed successfully:", response.data);
       
-      // ✅ Trigger order refresh
       generalContext.refreshOrders();
       
-      // Close the window after successful order
       generalContext.closeBuyWindow();
       
-      // Optional: Show success message or refresh orders
+      
       alert("Sell order placed successfully!");
     } catch (err) {
       console.error("Failed to place sell order:", err);
